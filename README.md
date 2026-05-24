@@ -17,6 +17,8 @@ The purpose of this project is to achieve near-zero downtime deployments and eas
 ---
 
 # 📌 Architecture
+![Architecture Diagram](https://github.com/sujalkamanna/blue-green-deployment-using-aws/blob/main/archicture.png)
+
 
 ```text
                         Internet
