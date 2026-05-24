@@ -1,0 +1,14 @@
+aws ecr get-login-password --region your-region | docker login --username AWS --password-stdin ACC_ID.dkr.ecr.your-region.amazonaws.com
+
+docker build -t b_g_deployment .
+
+docker tag blue:v1 \
+ACC_ID.dkr.ecr.your-region.amazonaws.com/ecr_repo_name:blue-v1
+
+docker tag green:v2 \
+ACC_ID.dkr.ecr.your-region.amazonaws.com/ecr_repo_name:green-v2
+
+
+docker push ACC_ID.dkr.ecr.your-region.amazonaws.com/ecr_repo_name:blue-v1
+
+docker push ACC_ID.dkr.ecr.your-region.amazonaws.com/ecr_repo_name:green-v2

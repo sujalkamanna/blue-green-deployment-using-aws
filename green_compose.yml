@@ -1,0 +1,7 @@
+services:
+  app:
+    image: 047492346856.dkr.ecr.ap-south-1.amazonaws.com/b_g_deployment:green-v2
+    container_name: apache-green
+    ports:
+      - "80:80"
+    restart: always
